@@ -21,12 +21,12 @@ Currently, the project uses the **STM32 HAL (Hardware Abstraction Layer)** frame
 
 | Component       | Status     |
 |----------------|------------|
-| STM32 HAL Setup| ✅ Working |
-| GPIO Control    | ✅ Blinking PA5 |
-| Voice Pipeline  | 🔄 Planned |
-| I2S Mic + DMA   | 🔄 Planned |
-| BLE UART        | 🔄 Planned |
-| ML Inference    | 🔄 Planned |
+| STM32 HAL Setup|  Working |
+| GPIO Control    |  Blinking PA5 |
+| Voice Pipeline  |  Planned |
+| I2S Mic + DMA   |  Planned |
+| BLE UART        |  Planned |
+| ML Inference    |  Planned |
 
 ---
 
