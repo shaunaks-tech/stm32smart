@@ -17,7 +17,7 @@ Currently, the project uses the **STM32 HAL (Hardware Abstraction Layer)** frame
 
 ---
 
-## 🚀Current Status
+## Current Status
 
 | Component       | Status     |
 |----------------|------------|
