@@ -6,18 +6,18 @@ Currently, the project uses the **STM32 HAL (Hardware Abstraction Layer)** frame
 
 ---
 
-## 🔍 Project Goals
+##  Project Goals
 
-- 🎙️ **Voice Command Recognition** (TinyML, TensorFlow Lite Micro)
-- 🎧 **Microphone Audio Capture** (INMP441 via I2S + DMA)
-- 📡 **Bluetooth Communication** (HC-05 / BLE UART to phone)
-- ✨ **Haptic/LED Feedback System**
-- 🔋 **Battery-Powered Operation with Power Optimization**
-- 📱 Optional: GPS-assisted navigation via phone app
+-  **Voice Command Recognition** (TinyML, TensorFlow Lite Micro)
+-  **Microphone Audio Capture** (INMP441 via I2S + DMA)
+-  **Bluetooth Communication** (HC-05 / BLE UART to phone)
+-  **Haptic/LED Feedback System**
+-  **Battery-Powered Operation with Power Optimization**
+-  Optional: GPS-assisted navigation via phone app
 
 ---
 
-## 🚀 Current Status
+## 🚀Current Status
 
 | Component       | Status     |
 |----------------|------------|
@@ -30,7 +30,7 @@ Currently, the project uses the **STM32 HAL (Hardware Abstraction Layer)** frame
 
 ---
 
-## ⚙️ Framework
+##  Framework
 
 Currently using **STM32 HAL** via PlatformIO for:
 - Simpler peripheral setup
@@ -39,7 +39,7 @@ Currently using **STM32 HAL** via PlatformIO for:
 
 ---
 
-## 🔄 Future Plan: CMSIS Transition
+##  Future Plan: CMSIS Transition
 
 Once prototyping is complete, the project may migrate to **bare-metal CMSIS** for:
 - Lower memory footprint
@@ -58,7 +58,7 @@ Once prototyping is complete, the project may migrate to **bare-metal CMSIS** fo
 
 ---
 
-## 🧰 Getting Started
+##  Getting Started
 
 1. Install PlatformIO in VSCode
 2. Clone this repo into your dev folder
