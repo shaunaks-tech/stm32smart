@@ -1,22 +1,25 @@
-#include "stm32f4xx_hal.h"
+#include <stm32f411xe.h>
 
-void SystemClock_Config(void);
-
+// write internal clock function to 84MHz for stm32f4 blackpill
 int main(void) {
-    HAL_Init();                  // Initialize the HAL Library
-    SystemClock_Config();        // Configure the system clock
+    
+    internal_clock();  // CMSIS-based clock config to 84 MHz
 
-    __HAL_RCC_GPIOA_CLK_ENABLE(); // Enable GPIOA clock
-
-    GPIO_InitTypeDef GPIO_InitStruct = {0};
-    GPIO_InitStruct.Pin = GPIO_PIN_5;
-    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-    GPIO_InitStruct.Pull = GPIO_NOPULL;
-    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+    // Configure PC13 for output (LED control)
+    RCC->AHB1ENR |= RCC_AHB1ENR_GPIOCEN;
+    GPIOC->MODER &= ~(3 << (13 * 2));
+    GPIOC->MODER |= (1 << (13 * 2));
+    GPIOC->OTYPER &= ~(1 << 13);
+    GPIOC->PUPDR &= ~(3 << (13 * 2));
 
     while (1) {
-        HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5); // Toggle PA5
-        HAL_Delay(500);                        // Wait 500ms
+        GPIOC->ODR |= (1 << 13); // Set PC13 high
+        for (volatile int i = 0; i < 1000000; i++); // Delay
+        GPIOC->ODR &= ~(1 << 13); // Set PC13 low
+        for (volatile int i = 0; i < 1000000; i++); // Delay
+
     }
 }
+
+
+
