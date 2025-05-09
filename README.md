@@ -6,7 +6,7 @@ The project is developed using **CMSIS (Cortex Microcontroller Software Interfac
 
 ---
 
-## 🎯 Project Goals
+## Project Goals
 
 - **Voice Command Recognition** (TinyML, TensorFlow Lite Micro)
 - **Microphone Audio Capture** (INMP441 via I2S + DMA)
@@ -17,13 +17,13 @@ The project is developed using **CMSIS (Cortex Microcontroller Software Interfac
 
 ---
 
-## ✅ Current Status
+##  Current Status
 
 | Component         | Status     |
 |------------------|------------|
-| CMSIS Setup       | ✅ Working |
-| Clock Config (84 MHz via HSE + PLL) | ✅ Working |
-| GPIO Control      | ✅ Blinking PC13 |
+| CMSIS Setup       |  Working |
+| Clock Config (84 MHz via HSE + PLL) |  Working |
+| GPIO Control      | Blinking PC13 |
 | Voice Pipeline    | 🔜 Planned |
 | I2S Mic + DMA     | 🔜 Planned |
 | BLE UART          | 🔜 Planned |
@@ -60,7 +60,7 @@ This approach provides:
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 1. Install [PlatformIO](https://platformio.org/install) in VSCode
 2. Clone this repository:
