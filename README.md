@@ -20,17 +20,21 @@ The project is developed using **CMSIS (Cortex Microcontroller Software Interfac
 
 ## Current Status
 
-| Component         | Status     |
-|------------------|------------|
-| CMSIS Setup       |  Working |
-| Clock Config (84 MHz via HSE + PLL) |  Working |
-| GPIO Control      | Blinking PC13 |
-| I2C + MPU6050     | 🔜 Next |
-| Data Logging via UART | 🔜 Planned |
-| TinyML Model Training | 🔜 Planned |
-| ML Inference Deployment | 🔜 Planned |
-| BLE UART          | 🔜 Planned |
-| Haptic Feedback   | 🔜 Planned |
+| Component               | Status         |
+|------------------------|----------------|
+| CMSIS Setup            |  Working     |
+| Clock Config (84 MHz)  |  Working     |
+| GPIO Control (PC13)    |  Working     |
+| I2C1 Setup             |  Completed   |
+| MPU6050 Init + Config  |  Next Step   |
+| UART Logging           |  Planned     |
+| TinyML Model Training  |  Planned     |
+| ML Inference Deployment|  Planned     |
+| BLE UART               |  Planned     |
+| Haptic Feedback        |  Planned     |
+
+> I2C1 peripheral has been successfully initialized and confirmed working via address scanning.
+> Next: Configure the MPU6050 by waking it from sleep and reading sensor data.
 
 ---
 
@@ -55,21 +59,21 @@ This approach provides:
 
 ## 📁 File Overview
 
-| File             | Purpose |
-|------------------|---------|
-| `src/main.c`     | Entry point, sets up internal clock and peripherals |
-| `src/clock.c`    | CMSIS-only 84 MHz HSE PLL configuration |
-| `src/i2c.c`      | I2C1 configuration for MPU6050 |
-| `src/mpu6050.c`  | MPU6050 sensor data acquisition |
-| `src/ml_model.c` | TinyML inference code (planned) |
-| `platformio.ini` | PlatformIO config (CMSIS + STM32F411) |
-| `README.md`      | Project overview, goals, and status |
+| File             | Purpose                             |
+|------------------|-------------------------------------|
+| `src/main.c`     | Entry point, sets up clock + UART   |
+| `src/clock.c`    | CMSIS-only 84 MHz PLL config        |
+| `src/i2c.c`      | I2C1 config + address scanning      |
+| `src/mpu6050.c`  | 🔜 WIP: Sensor config + data read   |
+| `src/ml_model.c` | 🔜 TinyML inference (planned)       |
+| `platformio.ini` | PlatformIO config (CMSIS + F411)    |
+| `README.md`      | Project overview                    |
 
 ---
 
 ## Getting Started
 
-1. Install [PlatformIO](https://platformio.org/install) in VSCode
+1. Install [PlatformIO](https://platformio.org/install) in VSCode  
 2. Clone this repository:
    ```bash
    git clone https://github.com/shaunaks-tech/stm32smart.git
